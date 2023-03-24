@@ -1,0 +1,50 @@
+\documentclass[openany]{book}
+\title{LaTeX Notes}
+\author{Alpha Huang}
+\date{\today}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{booktabs}%三线表
+\usepackage[T1]{fontenc}
+\usepackage{here}
+\usepackage{enumerate}   
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=4cm,right=3cm,top=3cm,bottom=3cm,
+]{geometry}
+\usepackage[english]{babel}
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{sample.bib} %Import the bibliography file
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang] 
+{\largefont\huge\bfseries}{\chaptertitlename \vspace{0.5em} \thechapter}{1em}{}
+\usepackage{indentfirst}
+%paragraph indentation
+\setlength{\parindent}{2em}
+%paragraph spacing
+\addtolength{\parskip}{3pt}
+%Line spacing
+
+\usepackage[justification=centering]{caption}
+%centering caption of a figure
+
+\renewcommand{\baselinestretch}{1.15}
+\graphicspath{ {./fig/} }
+\usepackage{float}
+
+\usepackage{fancyhdr}%没有页眉，页脚中部放置页码
+\pagestyle{plain}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\let\cleardoublepage\clearpage
+\input{src/backgrd}
+\input{src/ch1_intro}
+\input{src/ch2_exp}
+\input{src/ch3_sim}
+\input{src/ch4_res}
+\input{src/ch5_con}
+\input{src/ch6_ack}
+\end{document}
